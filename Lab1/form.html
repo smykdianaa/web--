@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Зворотний зв'язок — Мої 3 найкращі міста світу</title>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="лаб1.html">Головна</a></li>
+                <li><a href="city-tokyo.html">Токіо</a></li>
+                <li><a href="city-kyiv.html">Київ</a></li>
+                <li><a href="city-barcelona.html">Барселона</a></li>
+                <li><a href="form.html"><strong>Зворотний зв'язок</strong></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1>Анкета відвідувача та зворотний зв'язок</h1>
+            <p>Дякуємо за візит! Будь ласка, поділіться своїми враженнями або запропонуйте власні улюблені міста.</p>
+
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Особисті дані</legend>
+                    
+                    <p>
+                        <label for="username">Ваше ім'я (*):</label><br>
+                        <input type="text" id="username" name="username" required placeholder="Наприклад: Олександр">
+                    </p>
+
+                    <p>
+                        <label for="email">Електронна пошта (*):</label><br>
+                        <input type="email" id="email" name="email" required placeholder="name@example.com">
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Ваші вподобання</legend>
+
+                    <p>
+                        <label for="favorite-city">Яке з трьох міст з мого ТОП вам найбільше до душі?</label><br>
+                        <select id="favorite-city" name="favorite_city">
+                            <option value="tokyo">Токіо (Японія)</option>
+                            <option value="kyiv">Київ (Україна)</option>
+                            <option value="barcelona">Барселона (Іспанія)</option>
+                            <option value="other">Інше місто</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <span>Чи бували ви у цих містах?</span><br>
+                        <input type="radio" id="visited-yes" name="visited" value="yes">
+                        <label for="visited-yes">Так, бував(ла)</label><br>
+                        
+                        <input type="radio" id="visited-no" name="visited" value="no" checked>
+                        <label for="visited-no">Ні, але планую</label><br>
+                        
+                        <input type="radio" id="visited-never" name="visited" value="never">
+                        <label for="visited-never">Ні і не планую</label>
+                    </p>
+
+                    <p>
+                        <span>Що для вас найважливіше в подорожах? (обрати кілька):</span><br>
+                        <input type="checkbox" id="attr-architecture" name="priorities" value="architecture">
+                        <label for="attr-architecture">Архітектура</label><br>
+
+                        <input type="checkbox" id="attr-food" name="priorities" value="food">
+                        <label for="attr-food">Кухня та гастрономія</label><br>
+
+                        <input type="checkbox" id="attr-nature" name="priorities" value="nature">
+                        <label for="attr-nature">Природа та парки</label><br>
+
+                        <input type="checkbox" id="attr-tech" name="priorities" value="technology">
+                        <label for="attr-tech">Технології та інфраструктура</label>
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Ваш відгук</legend>
+
+                    <p>
+                        <label for="message">Порадьте своє улюблене місто або залишіть коментар:</label><br>
+                        <textarea id="message" name="message" rows="5" cols="40" placeholder="Опишіть ваші враження..."></textarea>
+                    </p>
+                </fieldset>
+
+                <p>
+                    <button type="submit">Надіслати форму</button>
+                    <button type="reset">Очистити</button>
+                </p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Навчальний проєкт «Мої 3 найкращі міста світу». <a href="лаб1.html">На головну</a></p>
+    </footer>
+
+</body>
+</html>
