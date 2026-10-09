@@ -1,0 +1,644 @@
+
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Акустична варта — Професійний акустичний моніторинг</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            color: #333333;
+            background-color: #f8fafc;
+            line-height: 1.5;
+        }
+
+        h1, h2, h3, h4 {
+            color: #111827;
+            font-weight: 700;
+        }
+
+        header {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e5e7eb;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-box {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+        }
+
+        /* SVG sound wave logo icon */
+        .logo-icon {
+            display: inline-block;
+            width: 32px;
+            height: 32px;
+        }
+
+        .logo-title {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: #111827;
+            line-height: 1.1;
+        }
+
+        .logo-tagline {
+            font-size: 0.75rem;
+            color: #6b7280;
+            display: block;
+            margin-top: 2px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.75rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #4b5563;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        nav a:hover, nav a.active {
+            color: #15803d;
+        }
+
+        nav a.active {
+            border-bottom: 2px solid #15803d;
+            padding-bottom: 4px;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+
+        section {
+            margin-bottom: 3rem;
+        }
+
+        .section-heading {
+            font-size: 1.5rem;
+            margin-bottom: 1.25rem;
+            color: #111827;
+        }
+
+        .hero-section {
+            position: relative;
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0.95) 40%, rgba(255, 255, 255, 0.6) 100%),
+                        url("C:\\Users\\diana\\OneDrive\\Робочий стіл\\web-програмування\\Lab2\\img1.png")no-repeat center right / cover;;
+            background-size: cover;
+            background-position: center right;
+            border-radius: 12px;
+            padding: 3.5rem 2.5rem;
+            border: 1px solid #e5e7eb;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .hero-content {
+            max-width: 520px;
+        }
+
+        .hero-title {
+            font-size: 2.3rem;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            color: #0f172a;
+        }
+
+        .hero-text {
+            color: #475569;
+            font-size: 1.05rem;
+            margin-bottom: 1.75rem;
+        }
+
+        .btn-green {
+            display: inline-block;
+            background-color: #15803d;
+            color: #ffffff;
+            font-weight: 600;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            font-size: 0.95rem;
+            transition: background-color 0.2s;
+        }
+
+        .btn-green:hover {
+            background-color: #166534;
+        }
+
+        .monitoring-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+            gap: 1rem;
+        }
+
+        .monitoring-card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 1.25rem;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+        }
+
+        .card-label {
+            font-size: 0.8rem;
+            color: #6b7280;
+            margin-bottom: 0.35rem;
+            display: block;
+        }
+
+        .card-value {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 0.25rem;
+        }
+
+        .card-subtext {
+            font-size: 0.8rem;
+            color: #6b7280;
+        }
+
+        .badge-norm {
+            display: inline-block;
+            background-color: #dcfce7;
+            color: #15803d;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.15rem 0.6rem;
+            border-radius: 4px;
+            margin-top: 0.25rem;
+        }
+
+        .directions-container {
+            font-size: 0; /* Clear inline-block spacing */
+            margin: 0 -0.5rem;
+        }
+
+        /* Demonstrating class selector and display: inline-block as required */
+        .direction-card {
+            display: inline-block;
+            width: calc(25% - 1rem);
+            vertical-align: top;
+            margin: 0.5rem;
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 1.25rem;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+            font-size: 1rem; /* Reset font size */
+            box-sizing: border-box;
+        }
+
+        .direction-card h3 {
+            font-size: 1.05rem;
+            margin-bottom: 0.5rem;
+            color: #111827;
+        }
+
+        .direction-card p {
+            font-size: 0.875rem;
+            color: #6b7280;
+            line-height: 1.4;
+        }
+
+        aside#warning-banner {
+            background-color: #fef2f2;
+            border: 1px solid #fecaca;
+            border-radius: 8px;
+            padding: 1.25rem;
+            margin-bottom: 3rem;
+        }
+
+        aside#warning-banner h3 {
+            color: #dc2626;
+            font-size: 1.2rem;
+            margin-bottom: 0.35rem;
+        }
+
+        aside#warning-banner p {
+            color: #7f1d1d;
+            font-size: 0.95rem;
+        }
+
+        .measurements-table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+        }
+
+        .measurements-table th, 
+        .measurements-table td {
+            padding: 0.85rem 1.25rem;
+            text-align: left;
+            font-size: 0.9rem;
+            border-bottom: 1px solid #f3f4f6;
+        }
+
+        .measurements-table th {
+            background-color: #f8fafc;
+            color: #4b5563;
+            font-weight: 600;
+        }
+
+        .text-red {
+            color: #dc2626;
+            font-weight: 600;
+        }
+
+        .text-green {
+            color: #15803d;
+            font-weight: 600;
+        }
+
+        .order-section {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 2rem;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+        }
+
+        .order-subtitle {
+            color: #6b7280;
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.25rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group.full-width {
+            grid-column: span 2;
+        }
+
+        label {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 0.35rem;
+        }
+
+        /* Attribute selectors requirement */
+        input[type="text"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 0.65rem 0.85rem;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-family: inherit;
+            outline: none;
+            color: #1f2937;
+            background-color: #ffffff;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #15803d;
+            box-shadow: 0 0 0 3px rgba(21, 128, 61, 0.1);
+        }
+
+        textarea {
+            resize: vertical;
+            height: 100px;
+        }
+
+        footer {
+            background-color: #1e293b;
+            color: #94a3b8;
+            padding: 2.5rem 1.5rem;
+            margin-top: 4rem;
+        }
+
+        .footer-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .footer-brand .logo-title {
+            color: #ffffff;
+        }
+
+        .footer-brand .logo-tagline {
+            color: #94a3b8;
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .footer-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: #ffffff;
+        }
+
+        .footer-copyright {
+            width: 100%;
+            text-align: right;
+            font-size: 0.85rem;
+            color: #64748b;
+            margin-top: 1rem;
+            border-top: 1px solid #334155;
+            padding-top: 1rem;
+        }
+
+        @media (max-width: 850px) {
+            .direction-card {
+                width: calc(50% - 1rem);
+            }
+        }
+
+        @media (max-width: 640px) {
+            .header-container {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: flex-start;
+            }
+            nav ul {
+                gap: 1rem;
+                font-size: 0.85rem;
+            }
+            .direction-card {
+                width: calc(100% - 1rem);
+            }
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+            .form-group.full-width {
+                grid-column: span 1;
+            }
+            .footer-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .footer-copyright {
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo-box">
+                <svg class="logo-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="2" y="10" width="3" height="12" rx="1.5" fill="#15803d"/>
+                    <rect x="8" y="4" width="3" height="24" rx="1.5" fill="#15803d"/>
+                    <rect x="14" y="8" width="3" height="16" rx="1.5" fill="#0f172a"/>
+                    <rect x="20" y="2" width="3" height="28" rx="1.5" fill="#15803d"/>
+                    <rect x="26" y="12" width="3" height="8" rx="1.5" fill="#15803d"/>
+                </svg>
+                <div>
+                    <span class="logo-title">Акустична варта</span>
+                    <span class="logo-tagline">Тиша сьогодні — комфорт завтра</span>
+                </div>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#home" class="active">Головна</a></li>
+                    <li><a href="#monitoring">Моніторинг</a></li>
+                    <li><a href="#services">Послуги</a></li>
+                    <li><a href="#order">Замовити</a></li>
+                    <li><a href="#contacts">Контакти</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="home">
+
+        <!-- Intro Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">Професійний акустичний моніторинг</h1>
+                <p class="hero-text">Вимірюємо рівень шуму. Аналізуємо дані. Допомагаємо створювати тихі та комфортні міста.</p>
+                <a href="#order" class="btn-green">Замовити дослідження</a>
+            </div>
+        </section>
+
+        <!-- Current Monitoring Section -->
+        <section id="monitoring">
+            <h2 class="section-heading">Поточний моніторинг</h2>
+            <div class="monitoring-grid">
+                <div class="monitoring-card">
+                    <span class="card-label">Об'єкт</span>
+                    <div class="card-value">ЖК «Зелений»</div>
+                    <span class="card-subtext">Київ, вул. Лісова, 12</span>
+                </div>
+                <div class="monitoring-card">
+                    <span class="card-label">Середній рівень</span>
+                    <div class="card-value">54 дБ</div>
+                    <span class="badge-norm">Норма</span>
+                </div>
+                <div class="monitoring-card">
+                    <span class="card-label">Період вимірювань</span>
+                    <div class="card-value">08:00 – 18:00</div>
+                    <span class="card-subtext">Сьогодні</span>
+                </div>
+                <div class="monitoring-card">
+                    <span class="card-label">Кількість точок</span>
+                    <div class="card-value">6</div>
+                    <span class="card-subtext">Активні датчики</span>
+                </div>
+                <div class="monitoring-card">
+                    <span class="card-label">Статус</span>
+                    <div class="card-value" style="font-size: 1.05rem; line-height: 1.3;">Вимірювання тривають</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Directions Section -->
+        <section id="services">
+            <h2 class="section-heading">Напрями роботи</h2>
+            <div class="directions-container">
+                <article class="direction-card">
+                    <h3>Житлові комплекси</h3>
+                    <p>Моніторинг шуму у дворах та на прилеглих територіях.</p>
+                </article>
+                <article class="direction-card">
+                    <h3>Офісні центри</h3>
+                    <p>Аналіз акустичного комфорту в робочих зонах.</p>
+                </article>
+                <article class="direction-card">
+                    <h3>Підприємства</h3>
+                    <p>Вимірювання та оцінка виробничого шуму.</p>
+                </article>
+                <article class="direction-card">
+                    <h3>Масові заходи</h3>
+                    <p>Контроль рівня шуму на концертах і фестивалях.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Warning Section -->
+        <aside id="warning-banner">
+            <h3>Увага!</h3>
+            <p>На точці №4 (вул. Центральна) зафіксовано підвищений рівень шуму — 72 дБ. Дані передано на додатковий аналіз.</p>
+        </aside>
+
+        <!-- Recent Measurements Section -->
+        <section>
+            <h2 class="section-heading">Останні вимірювання</h2>
+            <table class="measurements-table">
+                <thead>
+                    <tr>
+                        <th>Дата і час</th>
+                        <th>Місце</th>
+                        <th>Рівень шуму</th>
+                        <th>Статус</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>12.11.2024 16:20</td>
+                        <td>Вул. Центральна</td>
+                        <td class="text-red">72 дБ</td>
+                        <td class="text-red">Перевищення</td>
+                    </tr>
+                    <tr>
+                        <td>12.11.2024 13:45</td>
+                        <td>ЖК «Зелений»</td>
+                        <td>54 дБ</td>
+                        <td class="text-green">Норма</td>
+                    </tr>
+                    <tr>
+                        <td>12.11.2024 11:10</td>
+                        <td>Бізнес-центр «Парус»</td>
+                        <td>60 дБ</td>
+                        <td class="text-green">Норма</td>
+                    </tr>
+                    <tr>
+                        <td>11.11.2024 19:30</td>
+                        <td>Міський парк</td>
+                        <td>48 дБ</td>
+                        <td class="text-green">Норма</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Order Form Section -->
+        <section id="order" class="order-section">
+            <h2 class="section-heading" style="margin-bottom: 0.25rem;">Замовити дослідження</h2>
+            <p class="order-subtitle">Заповніть форму, і ми зв'яжемось з вами для уточнення деталей.</p>
+            
+            <form action="#" method="post">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="user-name">Ім'я *</label>
+                        <input type="text" id="user-name" name="name" placeholder="Ваше ім'я" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="user-email">Email *</label>
+                        <input type="email" id="user-email" name="email" placeholder="example@email.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="object-type">Тип об'єкта *</label>
+                        <select id="object-type" name="object_type" required>
+                            <option value="" disabled selected>Оберіть тип</option>
+                            <option value="residential">Житловий комплекс</option>
+                            <option value="office">Офісний центр</option>
+                            <option value="enterprise">Підприємство</option>
+                            <option value="event">Масовий захід</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="period">Бажаний період *</label>
+                        <input type="text" id="period" name="period" placeholder="дд.мм.рррр - дд.мм.рррр" required>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="description">Опис завдання</label>
+                        <textarea id="description" name="description" placeholder="Опишіть ваше завдання..."></textarea>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-green">Надіслати заявку</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer id="contacts">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <span class="logo-title">Акустична варта</span>
+                <span class="logo-tagline">Тиша сьогодні — комфорт завтра</span>
+            </div>
+            <ul class="footer-links">
+                <li><a href="#home">Головна</a></li>
+                <li><a href="#monitoring">Моніторинг</a></li>
+                <li><a href="#services">Послуги</a></li>
+                <li><a href="#contacts">Контакти</a></li>
+            </ul>
+            <div class="footer-copyright">
+                © 2024 Акустична варта. Всі права захищені.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
