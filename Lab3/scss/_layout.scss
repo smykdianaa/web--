@@ -1,0 +1,117 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+.header-container {
+  @include m.container;
+  padding-block: v.$space-md;
+  display: flex;
+  flex-direction: column;
+  gap: v.$space-md;
+  align-items: flex-start;
+
+  @include m.respond-to(v.$bp-tablet) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+main {
+  @include m.container;
+  padding-block: v.$space-lg;
+
+  section {
+    margin-bottom: 3rem;
+  }
+}
+
+.hero-section {
+  position: relative;
+  border-radius: 12px;
+  padding: 3.5rem 2.5rem;
+  border: 1px solid v.$color-border;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.95) 40%, rgba(255, 255, 255, 0.6) 100%),
+              url("../assets/img1.png") no-repeat center right / cover;
+
+  .hero-content {
+    max-width: 520px;
+  }
+
+  .hero-title {
+    font-size: clamp(1.8rem, 5vw, 2.3rem);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .hero-text {
+    color: #475569;
+    font-size: 1.05rem;
+    margin-bottom: 1.75rem;
+  }
+}
+
+.monitoring-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+
+  @include m.respond-to(v.$bp-tablet) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include m.respond-to(v.$bp-desktop) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.directions-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+
+  @include m.respond-to(v.$bp-tablet) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include m.respond-to(v.$bp-desktop) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+
+  @include m.respond-to(v.$bp-tablet) {
+    grid-template-columns: repeat(2, 1fr);
+
+    .form-group.full-width {
+      grid-column: span 2;
+    }
+  }
+}
+
+footer {
+  background-color: v.$color-footer;
+  color: #94a3b8;
+  padding: 2.5rem 1.5rem;
+  margin-top: 4rem;
+
+  .footer-container {
+    @include m.container;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+
+    @include m.respond-to(v.$bp-tablet) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+  }
+}
