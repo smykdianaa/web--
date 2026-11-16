@@ -1,0 +1,30 @@
+// Кольорова палітра
+$color-primary: #15803d;
+$color-primary-dark: #166534;
+$color-text: #333333;
+$color-heading: #111827;
+$color-muted: #6b7280;
+$color-bg-light: #f8fafc;
+$color-surface: #ffffff;
+$color-border: #e5e7eb;
+$color-footer: #1e293b;
+$color-footer-border: #334155;
+
+// Статусні кольори
+$color-danger: #dc2626;
+$color-danger-bg: #fef2f2;
+$color-danger-border: #fecaca;
+$color-success-bg: #dcfce7;
+
+// Відступи
+$space-xs: 4px;
+$space-sm: 8px;
+$space-md: 16px;
+$space-lg: 24px;
+$space-xl: 40px;
+
+// Параметри контейнера та адаптиву
+$container-max: 1100px;
+$radius: 8px;
+$bp-tablet: 768px;
+$bp-desktop: 1024px;
