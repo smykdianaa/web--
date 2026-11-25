@@ -1,0 +1,78 @@
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px;
+  font-family: Arial, sans-serif;
+}
+
+.sensor-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.sensor-form input,
+.sensor-form select,
+.sensor-form button {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+}
+
+.sensor-form button {
+  background-color: #16a34a;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.sensors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.sensor-card {
+  padding: 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.sensor-card--inactive {
+  opacity: 0.85;
+  background: #f8fafc;
+}
+
+.status-badge {
+  font-weight: 600;
+}
+
+.status-active {
+  color: #15803d;
+}
+
+.status-inactive {
+  color: #dc2626;
+}
+
+.card-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.card-actions button {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  background: #f1f5f9;
+  cursor: pointer;
+}
+
+.card-actions .btn-delete {
+  background: #fee2e2;
+  border-color: #fca5a5;
+  color: #991b1b;
+}

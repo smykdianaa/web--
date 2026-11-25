@@ -1,0 +1,10 @@
+# Залежності та кеш
+/node_modules
+/.angular/cache
+
+# Результат збірки
+/dist
+
+# Системні та службові файли
+.DS_Store
+Thumbs.db

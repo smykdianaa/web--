@@ -1,0 +1,69 @@
+<main class="container">
+  <h1>Акустична варта</h1>
+
+  <form class="sensor-form" (ngSubmit)="addSensor()">
+    <input
+      type="text"
+      name="name"
+      placeholder="Назва датчика"
+      [(ngModel)]="newName"
+      required
+    />
+
+    <input
+      type="text"
+      name="district"
+      placeholder="Район"
+      [(ngModel)]="newDistrict"
+      required
+    />
+
+    <input
+      type="number"
+      name="noiseLevel"
+      placeholder="Рівень шуму (дБ)"
+      [(ngModel)]="newNoiseLevel"
+      required
+    />
+
+    <select name="status" [(ngModel)]="newStatus">
+      <option value="active">active</option>
+      <option value="inactive">inactive</option>
+    </select>
+
+    <button type="submit">Додати датчик</button>
+  </form>
+
+  <h2>Список датчиків</h2>
+
+  <div class="sensors-grid">
+    @for (sensor of sensors; track sensor.id) {
+      <article class="sensor-card" [class.sensor-card--inactive]="sensor.status === 'inactive'">
+        <h3>{{ sensor.name }}</h3>
+        <p>Район: {{ sensor.district }}</p>
+        <p>Рівень шуму: <strong>{{ sensor.noiseLevel }} дБ</strong></p>
+        <p>
+          Статус:
+          <span
+            class="status-badge"
+            [class.status-active]="sensor.status === 'active'"
+            [class.status-inactive]="sensor.status === 'inactive'"
+          >
+            {{ sensor.status }}
+          </span>
+        </p>
+
+        <div class="card-actions">
+          <button type="button" (click)="toggleStatus(sensor.id)">
+            Змінити статус
+          </button>
+          <button type="button" class="btn-delete" (click)="deleteSensor(sensor.id)">
+            Видалити
+          </button>
+        </div>
+      </article>
+    } @empty {
+      <p>Датчиків поки немає. Додайте перший датчик вище.</p>
+    }
+  </div>
+</main>
